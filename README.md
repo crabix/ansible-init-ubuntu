@@ -5,7 +5,7 @@ A simple interactive script/Ansible playbook that sets up an Ubuntu-based Wiregu
 ## Usage
 
 ```
-wget https://raw.githubusercontent.com/notthebee/ansible-easy-vpn/main/bootstrap.sh -O bootstrap.sh && bash bootstrap.sh
+wget https://raw.githubusercontent.com/crabix/ansible-init-ubuntu/main/bootstrap.sh -O bootstrap.sh && bash bootstrap.sh
 ```
 
 ## Features
