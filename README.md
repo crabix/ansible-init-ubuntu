@@ -1,7 +1,6 @@
 # ansible-init-ubuntu
 
-A simple interactive script/Ansible playbook that sets up an Ubuntu-based Wireguard VPN server
-
+A simple interactive script/Ansible playbook that sets up an Ubuntu machine.
 ## Usage
 
 ```
