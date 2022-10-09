@@ -1,6 +1,9 @@
 # ansible-init-ubuntu
 
 A simple interactive script/Ansible playbook that sets up an Ubuntu machine.
+
+As of now it is a very stripped down version of nothebees original ansible vpn script.
+
 ## Usage
 
 ```
