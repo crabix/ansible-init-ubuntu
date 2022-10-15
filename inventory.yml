@@ -25,12 +25,6 @@ all:
     # This overrides `enable_ssh_keygen`
     # ssh_public_key: ""
 
-    authelia_host: "auth.{{ root_host }}"
-
-    wireguard_host: "wg.{{ root_host }}"
-
-    wireguard_port: "51820"
-
     dns_nameservers:
       - 1.1.1.1
       - 1.0.0.1

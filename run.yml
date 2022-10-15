@@ -33,18 +33,6 @@
       tags:
         - ufw
 
-    - role: authelia
-      tags:
-        - authelia
-
-    - role: bunkerweb
-      tags:
-        - bunkerweb
-
-    - role: wireguard
-      tags:
-        - wireguard
-
     - role: chriswayg.msmtp-mailer
       when: email_password is defined
       tags:
