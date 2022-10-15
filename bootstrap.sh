@@ -76,7 +76,7 @@ touch $HOME/ansible-easy-vpn/custom.yml
 
 
 clear
-echo "Welcome to ansible-easy-vpn!"
+echo "Welcome to ansible-easy-ubuntu-init!"
 echo
 echo "This script is interactive"
 echo "If you prefer to fill in the custom.yml file manually,"
