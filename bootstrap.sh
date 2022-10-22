@@ -59,7 +59,7 @@ check_root
 # Clone the Ansible playbook
 [ -d "$HOME/ansible-init-ubuntu" ] || git clone https://github.com/crabix/ansible-init-ubuntu $HOME/ansible-init-ubuntu 
 
-cd $HOME/aansible-init-ubuntu && ansible-galaxy install -r requirements.yml
+cd $HOME/ansible-init-ubuntu && ansible-galaxy install -r requirements.yml
 
 # Check if we're running on an AWS EC2 instance
 set +e
