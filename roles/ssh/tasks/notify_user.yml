@@ -41,9 +41,6 @@
 
           Since you're running an AWS EC2 instance, you might need to adjust firewall rules to access the WebUI
 
-          If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
-          prompted for an e-mail confirmation in Authelia.
-
     - name: ""
       when: ssh_public_key is not defined and not aws
       pause:
@@ -62,9 +59,6 @@
           4. After that's done, return to this terminal window and press [Enter]. 
           Your system will {{ notify_action }}. You will be logged out automatically
 
-          6. If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
-          prompted for an e-mail confirmation in Authelia.
-
     - name: ""
       when: ssh_public_key is defined and not aws
       pause:
@@ -75,9 +69,6 @@
 
           After ensuring that it works, return to this terminal window and press [Enter]
           Your system will {{ notify_action }}. You will be logged out automatically
-
-          If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
-          prompted for an e-mail confirmation in Authelia.
 
     - name: Reboot the system if updates are pending
       when: reboot_required.stat.exists
