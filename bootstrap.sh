@@ -94,7 +94,7 @@ echo "username: \"${username}\"" >> $HOME/ansible-init-ubuntu/custom.yml
 
 echo
 echo "Enter your user password"
-echo "This password will be used for Authelia login, administrative access and SSH login"
+echo "This password will be used SSH login"
 read -s -p "Password: " user_password
 until [[ "${#user_password}" -lt 60 ]]; do
   echo
