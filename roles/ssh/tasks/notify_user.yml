@@ -39,9 +39,6 @@
           After ensuring that it works, return to this terminal window and press [Enter]
           Your system will {{ notify_action }}. You will be logged out automatically
 
-          After a couple of minutes, you should be able to login to Wireguard WebUI in using your username and password
-          http://{{ wireguard_host }}
-
           Since you're running an AWS EC2 instance, you might need to adjust firewall rules to access the WebUI
 
           If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
@@ -65,9 +62,6 @@
           4. After that's done, return to this terminal window and press [Enter]. 
           Your system will {{ notify_action }}. You will be logged out automatically
 
-          5. After a couple of minutes, you should be able to login to Wireguard WebUI in using your username and password
-          http://{{ wireguard_host }}
-
           6. If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
           prompted for an e-mail confirmation in Authelia.
 
@@ -81,9 +75,6 @@
 
           After ensuring that it works, return to this terminal window and press [Enter]
           Your system will {{ notify_action }}. You will be logged out automatically
-
-          After a couple of minutes, you should be able to login to Wireguard WebUI in using your username and password
-          http://{{ wireguard_host }}
 
           If you didn't configure the e-mail functionality during the installation, type `show_2fa` in the CLI after you're
           prompted for an e-mail confirmation in Authelia.
