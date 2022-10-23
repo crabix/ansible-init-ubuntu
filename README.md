@@ -2,7 +2,8 @@
 
 A simple interactive script/Ansible playbook that sets up an Ubuntu machine.
 
-As of now it is a very stripped down version of nothebees original ansible vpn script.
+As of now it is a very stripped down version of nothebees amazing original ansible vpn script.
+Maybe i add my other ideas some day to it.
 
 ## Usage
 
@@ -11,6 +12,9 @@ wget https://raw.githubusercontent.com/crabix/ansible-init-ubuntu/main/bootstrap
 ```
 
 ## Features
+* Ubuntu updating & hardening
+* created new user (non root & sudo group)
+* Docker install (non root)
 * SSH hardening
 * SSH public key pair generation (optional, you can also use your own keys)
 * E-mail notifications (using an external SMTP server e.g. GMail)
