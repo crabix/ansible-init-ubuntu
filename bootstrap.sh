@@ -113,44 +113,6 @@ until [[ "$user_password" == "$user_password2" ]]; do
   read -s -p "Repeat password: " user_password2
 done
 
-
-echo
-echo
-echo "Enter your domain name"
-echo "The domain name should already resolve to the IP address of your server"
-echo "Make sure that 'wg' and 'auth' subdomains also point to that IP (not necessary with DuckDNS)"
-echo
-read -p "Domain name: " root_host
-until [[ "$root_host" =~ ^[a-z0-9\.\-]*$ ]]; do
-  echo "Invalid domain name"
-  read -p "Domain name: " root_host
-done
-
-public_ip=$(curl -s ipinfo.io/ip)
-domain_ip=$(dig +short @1.1.1.1 ${root_host})
-
-until [[ $domain_ip =~ $public_ip ]]; do
-  echo
-  echo "The domain $root_host does not resolve to the public IP of this server ($public_ip)"
-  echo
-  root_host_prev=$root_host
-  read -p "Domain name [$root_host_prev]: " root_host
-  if [ -z ${root_host} ]; then
-    root_host=$root_host_prev
-  fi
-  public_ip=$(curl -s ipinfo.io/ip)
-  domain_ip=$(dig +short @1.1.1.1 ${root_host})
-  echo
-done
-
-echo
-echo "Running certbot in dry-run mode to test the validity of the domain..."
-$SUDO certbot certonly --non-interactive --break-my-certs --force-renewal --agree-tos --email root@localhost.com --standalone --staging -d $root_host -d wg.$root_host -d auth.$root_host || exit
-echo "OK"
-
-echo "root_host: \"${root_host}\"" >> $HOME/ansible-init-ubuntu/custom.yml
-
-
 if [[ ! $aws =~ true ]]; then
   echo
   echo "Would you like to use an existing SSH key?"
